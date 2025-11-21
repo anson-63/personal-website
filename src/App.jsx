@@ -29,7 +29,7 @@ function Layout() {
     <div className='container'>
       {/* Navigation - always visible */}
       <div className='header'>
-        <Link to='/'><h2>Home</h2></Link>
+        <Link to='/personal-website'><h2>Home</h2></Link>
         <Link to='/resume'><h2>Resume</h2></Link>
         <div className="dropdown">
           <button className="dropbtn"><h2>Project</h2></button>
@@ -76,7 +76,7 @@ function Layout() {
       {/* This is where the routed content goes */}
       <div className='main-content'>
         <Routes>
-          <Route path="*" element={<Home />} />
+          <Route path="/personal-website" element={<Home />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/proj/map" element={<Map />} />
           <Route path="/proj/login" element={<Login />} />
