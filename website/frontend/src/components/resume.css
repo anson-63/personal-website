@@ -1,0 +1,61 @@
+.section-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+ul{
+    list-style-type: none;
+}
+
+ul.bullet{
+    list-style-type: disc;
+}
+ul.education-list {
+    list-style-type: none;
+    padding-left: 2em; /* space for bullets + line */
+    position: relative;
+}
+
+ul.education-list li {
+    position: relative;
+    margin-bottom: 0;
+    padding-left: 1.5em; /* make room for the bullet */
+}
+
+/* Vertical connecting line */
+ul.education-list li:before {
+    content: "";
+    position: absolute;
+    left: -16px;           /* distance from left edge of li */
+    top: 0;
+    bottom: 0;
+    border-left: 2px solid #213547;  /* blue line - adjust color as needed */
+    height: 100%;
+    
+}
+/* Adjust line for first item (starts from middle of bullet) */
+ul.education-list li:first-child:before {
+    top: 20px;   /* half of bullet size + any desired offset */
+}
+
+/* Adjust line for last item (ends at middle of bullet) */
+ul.education-list li:last-child:before {
+    height: 14px;   /* same value as first-child top */
+}
+
+/* Custom bullets (circles) */
+ul.education-list li:after {
+    content: "";
+    position: absolute;
+    left: -21.15px;                  /* align bullet with the line */
+    top: 12px;                     /* vertical alignment */
+    width: 12px;
+    height: 12px;
+    background-color:  #213547;    /* bullet color - matches line */
+    border: 3px solid #ffffff;    /* optional white ring for contrast */
+    border-radius: 50%;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 2px  #213547; /* outer ring matching line color */
+    opacity: 0.9;
+}

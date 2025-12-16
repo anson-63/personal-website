@@ -1,0 +1,22 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Allow read/write to users collection
+    match /users/{userId} {
+      allow read, write: if request.auth != null;
+    }
+
+    // Allow anyone logged in to read/write their private chatrooms
+    match /chatrooms/{chatroomId}/{document=**} {
+      allow read, write: if request.auth != null 
+                      && (request.auth.uid in chatroomId.split('_'));
+    }
+
+    // Optional: Allow reading all users (for search)
+    match /users/{userId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+  }
+}

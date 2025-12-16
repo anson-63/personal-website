@@ -1,0 +1,20 @@
+.color-select{
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    background-color: white;
+    cursor: pointer;
+    min-width: 140px;
+}
+
+button{
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #213547;
+    background-color: #213547;
+    color: white;
+    cursor: pointer;
+}

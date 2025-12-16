@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "default": "project-7974957179350906161"
+  },
+  "targets": {
+    "project-7974957179350906161": {
+      "hosting": {
+        "anson": [
+          "anson-li",
+          "ansonli"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
