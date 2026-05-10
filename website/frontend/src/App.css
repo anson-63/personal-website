@@ -96,6 +96,7 @@
 
 .sidebar  { 
   grid-area: menu; 
+  padding: 10px!important;
 }
 .content  { 
   grid-area: content; 
@@ -111,10 +112,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 80%;
+  max-width: 65%;
   height: auto;
   border-radius: 40px;
   background-color: #ffffff;
+  aspect-ratio: 1 / 1;
 }
 
 /* Each contact box */
@@ -130,6 +132,10 @@
   padding: 10px;
   background: #f8f9fa;
   border-radius: 8px;
+}
+
+.sidebar .box:last-of-type {
+  margin-bottom: 0;
 }
 
 .sidebar .box i {

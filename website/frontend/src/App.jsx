@@ -81,7 +81,13 @@ function Layout() {
           <h3>LinkedIn</h3>
           <p>Yin Wang Li</p>
         </div>
-        
+        <div className='box'>
+          <a href="https://www.github.com/anson-63" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <h3>GitHub</h3>
+          <p>anson-63</p>
+        </div>
       </div>
 
       {/* This is where the routed content goes */}
